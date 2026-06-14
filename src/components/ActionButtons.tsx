@@ -1,6 +1,7 @@
 "use client";
 
 import { Heart, MessageCircle, Share2 } from "lucide-react";
+import { formatCount } from "@/utils/formatCount";
 
 type ActionButtonProps = {
   isLiked: boolean;
@@ -9,12 +10,6 @@ type ActionButtonProps = {
   sharesCount: number;
   onToggleLike: () => void;
 };
-
-function formatCount(value: number) {
-  if (value >= 1_000_000) return `${(value / 1_000_000).toFixed(1)}M`;
-  if (value >= 1_000) return `${(value / 1_000).toFixed(1)}K`;
-  return String(value);
-}
 
 export default function ActionButtons({
   isLiked,
