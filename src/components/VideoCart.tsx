@@ -18,8 +18,10 @@ export default function VideoCard({ video }: VideoCardProps) {
   const [isPlaying, setIsPlaying] = useState(false);
   const [showStatusIcon, setShowStatusIcon] = useState(false);
 
-  const [isLiked, setIsLiked] = useState(false);
-  const [likesCount, setLikesCount] = useState(video.likesCount);
+  const [{ isLiked, likesCount }, setLikeState] = useState(() => ({
+    isLiked: false,
+    likesCount: video.likesCount,
+  }));
 
   const flashStatusIcon = useCallback(() => {
     setShowStatusIcon(true);
@@ -64,14 +66,13 @@ export default function VideoCard({ video }: VideoCardProps) {
   }, [flashStatusIcon, pauseVideo, playVideo]);
 
   const handleToggleLike = useCallback(() => {
-    setIsLiked((currentValue) => {
-      const nextValue = !currentValue;
+    setLikeState((currentState) => {
+      const nextIsLiked = !currentState.isLiked;
 
-      setLikesCount((currentCount) => {
-        return nextValue ? currentCount + 1 : currentCount - 1;
-      });
-      
-      return nextValue;
+      return {
+        isLiked: nextIsLiked,
+        likesCount: currentState.likesCount + (nextIsLiked ? 1 : -1),
+      };
     });
   }, []);
 

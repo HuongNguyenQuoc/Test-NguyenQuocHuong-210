@@ -1,7 +1,7 @@
 "use client";
 
-import { Heart, MessageCircle, Share2 } from "lucide-react";
 import { formatCount } from "@/utils/formatCount";
+import { Heart, MessageCircle, Share2 } from "lucide-react";
 
 type ActionButtonProps = {
   isLiked: boolean;
@@ -34,8 +34,12 @@ export default function ActionButtons({
           <Heart size={28} fill={isLiked ? "currentColor" : "none"} />
         </span>
 
-        <span className="text-xs font-semibold text-white">
-          {formatCount(likesCount)}
+        <span className="text-xs font-semibold text-white sm:hidden">
+          {formatCount(likesCount, true)}
+        </span>
+
+        <span className="hidden text-xs font-semibold text-white sm:inline">
+          {formatCount(likesCount, false)}
         </span>
       </button>
 
@@ -48,8 +52,11 @@ export default function ActionButtons({
           <MessageCircle size={28} />
         </span>
 
-        <span className="text-xs font-semibold text-white">
-          {formatCount(commentsCount)}
+        <span className="text-xs font-semibold text-white sm:hidden">
+          {formatCount(commentsCount, true)}
+        </span>
+        <span className="hidden text-xs font-semibold text-white lg:inline">
+          {formatCount(commentsCount, false)}
         </span>
       </button>
 
@@ -62,10 +69,13 @@ export default function ActionButtons({
           <Share2 size={28} />
         </span>
 
-        <span className="text-xs font-semibold text-white">
-          {formatCount(sharesCount)}
+        <span className="text-xs font-semibold text-white sm:hidden">
+          {formatCount(sharesCount, true)}
+        </span>
+        <span className="hidden text-xs font-semibold text-white lg:inline">
+          {formatCount(sharesCount, false)}
         </span>
       </button>
-    </div> 
+    </div>
   );
 }

@@ -3,43 +3,52 @@ import type { VideoItem } from "@/types/video";
 export const videos: VideoItem[] = [
   {
     id: "1",
-    videoUrl: "https://www.w3schools.com/html/mov_bbb.mp4",
-    authorName: "Big Buck Bunny",
-    description: "A sample video used to test the vertical video feed UI.",
-    likesCount: 1280,
-    commentsCount: 92,
-    sharesCount: 31,
+    videoUrl: "/videos/6277870051771559609.mp4",
+    authorName: "mr.musicfantastd",
+    description:
+      "This was peak life #2015 #peaklife #beachwaves #summernight #nostalgiacore",
+    likesCount: 10700,
+    commentsCount: 185,
+    sharesCount: 1155,
   },
   {
     id: "2",
-    videoUrl:
-      "https://interactive-examples.mdn.mozilla.net/media/cc0-videos/friday.mp4",
-    authorName: "MDN Video",
-    description: "Auto play and pause video using Intersection Observer API.",
-    likesCount: 2450,
-    commentsCount: 180,
-    sharesCount: 76,
+    videoUrl: "/videos/9419791450519877074.mp4",
+    authorName: "gm24060",
+    description: "Nobody cares #xuhuong #davidlaid #fyp #trending",
+    likesCount: 8083,
+    commentsCount: 91,
+    sharesCount: 1413,
   },
   {
     id: "3",
-    videoUrl: "https://media.w3.org/2010/05/sintel/trailer.mp4",
-    authorName: "Sintel Trailer",
-    description:
-      "Responsive full-screen vertical scroll layout with smooth snap.",
-    likesCount: 3810,
-    commentsCount: 245,
-    sharesCount: 120,
+    videoUrl: "/videos/65859868812316612762.mp4",
+    authorName: "founded",
+    description: "growth does not come from adding more.",
+    likesCount: 4700031,
+    commentsCount: 8250,
+    sharesCount: 637400,
   },
   {
     id: "4",
-    videoUrl: "https://www.w3schools.com/html/movie.mp4",
-    authorName: "Demo Creator",
+    videoUrl: "/videos/42710299778195094881.mp4",
+    authorName: "gm24060",
     description:
-      "Click the video to play or pause like a real short video app.",
-    likesCount: 970,
+      "Cất đi nỗi buồn ngày hôm qua và bước tiếp vào ngày hôm nay! #xuhuong #davidlaid #trending",
+    likesCount: 3835,
     commentsCount: 51,
-    sharesCount: 14,
+    sharesCount: 763,
+  },
+  {
+    id: "5",
+    videoUrl: "/videos/83061741885422519923.mp4",
+    authorName: "belmarxlearning",
+    description:
+      "Treat yourself like someone worth rooting for. Because you are.",
+    likesCount: 415,
+    commentsCount: 4,
+    sharesCount: 18,
   },
 ];
 
-// This is mock data. I just give 4 fake video objects and after that I also added commentsCount and sharesCount because they make the UI look more realistic.
+// This is mock data. I just give 5 fake video objects and after that I also added commentsCount and sharesCount because they make the UI look more realistic.
