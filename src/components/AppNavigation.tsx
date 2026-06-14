@@ -16,7 +16,7 @@ export default function AppNavigation() {
               <button
                 key={item.label}
                 type="button"
-                className={`flex flex-col items-center gap-1 text-xs transition hover: scale-105 ${
+                className={`flex flex-col items-center gap-1 text-xs transition hover:scale-105 ${
                   item.active ? "text-white" : "text-white/50"
                 }`}
               >
