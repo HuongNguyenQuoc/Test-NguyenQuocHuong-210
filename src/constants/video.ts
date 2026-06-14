@@ -1,0 +1,2 @@
+export const AUTO_PLAY_THRESHOLD = 0.7;
+export const STATUS_ICON_DURATION_MS = 550;
