@@ -12,9 +12,15 @@ import type { VideoItem } from "@/types/video";
 
 type VideoCardProps = {
   video: VideoItem;
+  isMuted: boolean;
+  onToggleMuted: () => void;
 };
 
-export default function VideoCard({ video }: VideoCardProps) {
+export default function VideoCard({
+  video,
+  isMuted,
+  onToggleMuted,
+}: VideoCardProps) {
   const cardRef = useRef<HTMLElement | null>(null);
   const {
     videoRef,
@@ -49,7 +55,7 @@ export default function VideoCard({ video }: VideoCardProps) {
           ref={videoRef}
           src={video.videoUrl}
           className="h-full w-full cursor-pointer object-cover"
-          muted
+          muted={isMuted}
           loop
           playsInline
           preload="metadata"
@@ -69,7 +75,9 @@ export default function VideoCard({ video }: VideoCardProps) {
 
         <VideoOverlay
           isPlaying={isPlaying}
+          isMuted={isMuted}
           showStatusIcon={showStatusIcon}
+          onToggleMuted={onToggleMuted}
         />
 
         <VideoText
