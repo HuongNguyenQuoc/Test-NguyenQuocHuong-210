@@ -22,10 +22,10 @@ button {
 .no-scrollbar::-webkit-scrollbar {
   display: none;
 }
-/* This part is for hiding scrollbar for Chrome / Safari / Edge WebKit-based browers.
+/* This part is for hiding scrollbar for Chrome / Safari / Edge WebKit-based browers. */
 
 .no-scrollbar {
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
-/* scrollbar-width none is mainly for hiding scrollbars in Firefox
+/* scrollbar-width none is mainly for hiding scrollbars in Firefox */
